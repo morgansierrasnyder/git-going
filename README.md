@@ -19,7 +19,7 @@ _**Now open up your terminal! 🤠**_
 3. Download this code repository using `git clone git@github.com:morgansierrasnyder/git-going.git`
 4. Use `cd git-going` to navigate into the directory that now contains the repository
 
-**Note:** if you get an error that says, "Support for password authentication was removed on August 13, 2021", you may need to use an SSH key for authentication. Here are the steps for that:
+**Note:** if you get an error that says, "Cannot access remote repository" or "Support for password authentication was removed on August 13, 2021", you  need to use an SSH key for authentication. Github documentation for adding SSH keys is [here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh), or here:
 1. Create an SSH key by typing ssh-keygen into Terminal. I recommend saving it in the default location, `~/.ssh/id_rsa` A passphrase is optional, but recommended.
 2. Go to the directory where you saved your SSH key; `cd ~/.ssh` is the default 
 3. Show the contents of your key `cat id_rsa.pub`
