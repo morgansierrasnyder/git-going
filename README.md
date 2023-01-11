@@ -4,7 +4,9 @@ This is a quick course to start using version control with git.
 
 ### _What is version control?_
 
-Version control, also known as revision control, is a software program that allows us to track distributed changes to information/code over time. Git is an example of a version control implementation. Changes are "distributed" when they come from many different sources. For instance, if a team of developers is all making changes to the same code, or if you have a different branch of evolution that has resulted in changes to a single original genome. We can use version control to "revert" or rewind back to an older version of the information/code, "merge" an updated version into our copy, "push" our changes to a "master" copy and do much more. Let's get set up to travel through time and alternative versions of reality via version control! 🚀
+Version control, also known as revision control, is a software program that allows us to track distributed changes to data, or code, over time. Git is one example of a version control implementation. Changes are "distributed" when they come from many different sources. For instance, if a team of developers is all making changes to the same code, or if you have a different branch of evolution that has resulted in changes to a single original genome. We can use version control to "revert" or rewind back to an older version of the code, "merge" an updated version into our copy, "push" our changes to a "master" copy and do much more. 
+
+Let's get set up to travel through time and alternative versions of reality via version control! 🚀
 
 ### 1. Getting Started
 
@@ -12,21 +14,30 @@ First, create an account on github! This site! ^ :octocat:
 
 _PSA: You don't need to use your school username_
 
-_**Now open up your terminal! 🤠**_
+_**Now open up your terminal! - Any commands that follow will be run in Terminal unless otherwise specified 🤠**_
 
-1. Follow these instructions to check if you have `git` installed on your machine and install it if you don't: https://github.com/git-guides/install-git
-2. Use `cd` to navigate to the directory that you want to store your code in. (I like to have a `~/Development` folder, for example)
-3. Download this code repository using `git clone git@github.com:morgansierrasnyder/git-going.git`
-4. Use `cd git-going` to navigate into the directory that now contains the repository
-
-**Note:** if you get an error that says, "Cannot access remote repository" or "Support for password authentication was removed on August 13, 2021", you  need to use an SSH key for authentication. Github documentation for adding SSH keys is [here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh), or here:
-1. Create an SSH key by typing ssh-keygen into Terminal. I recommend saving it in the default location, `~/.ssh/id_rsa` A passphrase is optional, but recommended.
-2. Go to the directory where you saved your SSH key; `cd ~/.ssh` is the default 
-3. Show the contents of your key `cat id_rsa.pub`
-4. Copy this entire string, including the "ssh-rsa" at the beginning and your email address or username at the end.
-5. Go to Github. In the upper right corner, click on the down arrow next to your user icon. Click Settings. Go to SSH and GPG keys. Click "New SSH key" and paste the contents of your public key, along with a title of your choice.
-6. You may need to wait ~5 minutes for your key to get propagated to all the servers; then you should be able to access the repositories you have access to.
-
+#### Install Git
+1. Check if you have `git` installed on your machine by typing `git help` in your Terminal. If you get a `"Command not found"` error, complete steps (2) and (3) below:
+2. Install homebrew, a package manager for Mac OS [brew.sh](brew.sh)
+3. Install git: `brew install git` in Terminal
+#### Set up SSH Keys
+1. Move into default SSH directory: `cd ~/.ssh`
+2. Generate a public/private key pair: `ssh-keygen`
+3. Hit "enter" to save the key in the default file
+4. Hit "enter" again to skip using a passphrase
+5. Copy the public key to your clipboard: `pbcopy < id_rsa.pub`
+6. Go to your Github profile in the browser (avatar in top right) > Settings, then SSH and GPG Keys on the left
+7. Click the green button "New SSH Key" and paste your key. Name it anything!
+#### Connect local code to a remote repository
+1. Use `cd` to navigate to the directory that you want to store your code in. (I like to have a `~/Development` folder, for example)
+2. Download this code repository using `git clone git@github.com:morgansierrasnyder/git-going.git` or `git clone [repository address]` if you want to clone a different repo
+3. Use `cd git-going` to navigate into the directory that now contains the repository
+4. The code is now on your computer (local!) - open the project in your [code editor](https://code.visualstudio.com/download)
+#### Publish your local code changes
+1. Save your changes to the code (in your code editor). Now in Terminal...
+2. Stage your changes to be published: `git add .`
+3. Commit your changes locally: `git commit -m "this is a description of my changes"
+4. Publish your changes remotely (to the internet): `git push`
 
 You're now ready to make new versions of this code!
 
@@ -34,7 +45,7 @@ You're now ready to make new versions of this code!
 
 _**Hold up 🛑: Group demo: Basic git commands**_
 
-### 2. Contributing
+### Contributing
 
 Review the basic git commands on the cheatsheet.
 There are many more resources on the internet that go into deeper explanations of each command, but here are a few solid ones:
