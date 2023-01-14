@@ -36,9 +36,9 @@ _**Now open up your terminal! - Any commands that follow will be run in Terminal
 3. Use `cd git-going` to navigate into the directory that now contains the repository
 4. The code is now on your computer (local!) - open the project in your [code editor](https://code.visualstudio.com/download)
 #### Publish your local code changes
-1. Save your changes to the code (in your code editor). Now in Terminal...
+1. Make changes to the code (in your code editor). Don't forget to Save! Now in Terminal...
 2. Stage your changes to be published: `git add .`
-3. Commit your changes locally: `git commit -m "this is a description of my changes"
+3. Commit your changes locally: `git commit -m "this is a description of my changes"`
 4. Publish your changes remotely (to the internet): `git push`
 
 You're now ready to make new versions of this code!
