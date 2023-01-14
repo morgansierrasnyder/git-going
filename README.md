@@ -47,7 +47,7 @@ You're now ready to make new versions of this code!
 
 _**Hold up 🛑: Group demo: Basic git commands**_
 
-### Contributing
+### 2. Contributing
 
 Review the basic git commands on the cheatsheet.
 There are many more resources on the internet that go into deeper explanations of each command, but here are a few solid ones:
